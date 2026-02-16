@@ -70,6 +70,12 @@ cp com.fabada.ai-news-digest.plist ~/Library/LaunchAgents/
 launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.fabada.ai-news-digest.plist
 ```
 
+To ensure your Mac is awake for the scheduled run:
+
+```bash
+sudo pmset repeat wakeorpoweron S 07:55:00
+```
+
 To stop it:
 
 ```bash
