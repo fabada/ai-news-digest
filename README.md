@@ -60,12 +60,12 @@ For Gmail, generate an App Password under Google Account > Security > App Passwo
 
 ### Scheduled (macOS)
 
-A LaunchAgent plist is included to run the digest every 2 days:
+A LaunchAgent plist is included to run the digest every Saturday at 8am:
 
 ```bash
+# Edit the plist to replace the run.sh path with your local filepath
 cp com.fabada.ai-news-digest.plist ~/Library/LaunchAgents/
-# Edit the plist to update file paths if needed
-launchctl load ~/Library/LaunchAgents/com.fabada.ai-news-digest.plist
+launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.fabada.ai-news-digest.plist
 ```
 
 To stop it:
