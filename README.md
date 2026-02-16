@@ -2,6 +2,8 @@
 
 An automated pipeline that uses Claude to search the web for the latest AI news and delivers a formatted summary to your inbox.
 
+This includes a Launchagent plist file for macOS to run a scheduled job using launchd.
+
 ## How it works
 
 1. **Fetch** — Runs Claude (via the CLI) with web search to find the top AI news from the past 2 days across models, research, industry, policy, and open source.
