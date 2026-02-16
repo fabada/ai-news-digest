@@ -1,0 +1,26 @@
+{
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": { "type": "string" },
+          "summary": { "type": "string" },
+          "source_url": { "type": "string" },
+          "category": {
+            "type": "string",
+            "enum": ["Models", "Research", "Industry", "Policy", "Open Source", "Other"]
+          }
+        },
+        "required": ["title", "summary", "source_url", "category"],
+        "additionalProperties": false
+      }
+    },
+    "search_date": { "type": "string" },
+    "item_count": { "type": "integer" }
+  },
+  "required": ["items", "search_date", "item_count"],
+  "additionalProperties": false
+}

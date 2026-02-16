@@ -1,0 +1,4 @@
+config.env
+logs/
+/send-email
+*.swp
