@@ -6,7 +6,7 @@ This includes a Launchagent plist file for macOS to run a scheduled job using la
 
 ## How it works
 
-1. **Fetch** — Runs Claude (via the CLI) with web search to find the top AI news from the past 2 days across models, research, industry, policy, and open source.
+1. **Fetch** — Runs Claude (via the CLI) with web search to find the top AI news from the past 7 days across models, research, industry, policy, and open source.
 2. **Validate** — Extracts structured JSON from Claude's response and checks that news items were found.
 3. **Send** — Pipes the JSON into a Go binary that renders HTML + plain-text emails and sends them via SMTP.
 
@@ -47,7 +47,7 @@ SMTP_PORT=587
 SMTP_USER=you@gmail.com
 SMTP_PASSWORD=xxxx-xxxx-xxxx-xxxx
 FROM_EMAIL=you@gmail.com
-TO_EMAIL=you@gmail.com
+TO_EMAILS=you@gmail.com,another@gmail.com
 ```
 
 For Gmail, generate an App Password under Google Account > Security > App Passwords.

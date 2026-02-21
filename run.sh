@@ -49,6 +49,6 @@ echo "$NEWS_JSON" | "$SCRIPT_DIR/send-email" \
   --smtp-user "$SMTP_USER" \
   --smtp-password "$SMTP_PASSWORD" \
   --from "$FROM_EMAIL" \
-  --to "$TO_EMAIL"
+  --to "$TO_EMAILS"
 
 echo "=== Run completed at $(date) ==="
